@@ -1,17 +1,15 @@
 #ifndef CHAR_TRIE_TRIE_H
 #define CHAR_TRIE_TRIE_H
 
-struct trie_branch
-{
-	struct trie_branch **branches;
-	unsigned long      branch_count;
-	char               key;
+struct trie_branch {
+  struct trie_branch **branches;
+  unsigned long branch_count;
+  char key;
 };
 
-struct trie
-{
-	struct trie_branch **branches;
-	unsigned long      branch_count;
+struct trie {
+  struct trie_branch **branches;
+  unsigned long branch_count;
 };
 
 void trie_init(struct trie *t);
@@ -27,4 +25,3 @@ void trie_branch_init(struct trie_branch *b);
 void trie_branch_free(struct trie_branch *b);
 
 #endif
-
